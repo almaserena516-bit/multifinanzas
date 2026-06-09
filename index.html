@@ -1,0 +1,240 @@
+<!-- ICONOS Y FUENTES -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+    :root {
+        --azul-oscuro: #0f2a4a;
+        --azul-clarito: #1e4b7a;
+        --celeste-accion: #00a8cc;
+        --verde-whatsapp: #25D366;
+        --gris-fondo: #f4f7f6;
+        --texto-oscuro: #333333;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Open Sans', sans-serif; color: var(--texto-oscuro); background-color: #ffffff; line-height: 1.6; }
+    h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 700; }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+
+    header { background-color: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; padding: 15px 0; }
+    header .container { display: flex; justify-content: space-between; align-items: center; }
+    
+    /* LOGO CON SÍMBOLO CORPORATIVO */
+    .logo { font-family: 'Montserrat', sans-serif; font-size: 1.4rem; color: var(--azul-oscuro); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    .logo i { color: var(--celeste-accion); font-size: 1.3rem; }
+    
+    nav a { color: var(--azul-clarito); text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.9rem; }
+
+    .hero { background: linear-gradient(135deg, var(--azul-oscuro) 0%, var(--azul-clarito) 100%); color: #ffffff; padding: 40px 0; }
+    .hero .container { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
+    @media (max-width: 992px) { .hero .container { grid-template-columns: 1fr; } }
+
+    .hero-text h1 { font-size: 2.5rem; line-height: 1.2; margin-bottom: 20px; }
+    .hero-text p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 10px; }
+    .hero-tags { font-size: 0.95rem; opacity: 0.75; line-height: 1.5; margin-top: 15px; border-left: 3px solid var(--celeste-accion); padding-left: 10px; }
+
+    .form-box { background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); color: var(--texto-oscuro); }
+    .form-box h3 { margin-bottom: 20px; color: var(--azul-oscuro); text-align: center; }
+    .form-group { margin-bottom: 15px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    @media (max-width: 480px) { .form-row { grid-template-columns: 1fr; gap: 0; } }
+
+    .form-group label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.85rem; color: #555; }
+    .form-group input, .form-group select { width: 100%; padding: 10px 12px; border: 1px solid #cccccc; border-radius: 4px; font-size: 0.95rem; background-color: #fff; font-family: 'Open Sans', sans-serif; }
+
+    .file-input-wrapper { position: relative; margin-top: 5px; }
+    .file-input-wrapper input[type="file"] { position: absolute; left: 0; top: 0; opacity: 0; width: 100%; height: 100%; cursor: pointer; }
+    .file-label-btn { display: block; padding: 10px; background-color: #f0f4f8; border: 2px dashed var(--azul-clarito); color: var(--azul-clarito); text-align: center; border-radius: 4px; font-weight: 600; font-size: 0.9rem; }
+    .file-input-wrapper:hover .file-label-btn { background-color: #e2ecf5; }
+
+    .btn-submit { width: 100%; background-color: var(--celeste-accion); color: white; border: none; padding: 14px; font-size: 1rem; font-weight: bold; border-radius: 4px; cursor: pointer; text-transform: uppercase; margin-top: 10px; }
+    .btn-submit:hover { background-color: #008ba8; }
+
+    .features { padding: 60px 0; background-color: var(--gris-fondo); text-align: center; }
+    .features h2 { color: var(--azul-oscuro); margin-bottom: 40px; font-size: 2rem; }
+    .grid-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+    .feature-card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    .feature-card i { font-size: 2.5rem; color: var(--celeste-accion); margin-bottom: 15px; }
+    .feature-card h3 { margin-bottom: 10px; color: var(--azul-oscuro); }
+
+    footer { background-color: var(--azul-oscuro); color: white; padding: 50px 0 30px 0; font-size: 0.9rem; }
+    .footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 30px; }
+    @media (max-width: 600px) { .footer-content { flex-direction: column; text-align: center; } }
+    
+    .social-icons { margin-top: 15px; display: flex; gap: 15px; }
+    @media (max-width: 600px) { .social-icons { justify-content: center; } }
+    
+    .social-link { color: white; font-size: 1.5rem; transition: color 0.3s; text-decoration: none; }
+    .social-link.whatsapp:hover { color: #25D366; }
+    .social-link.instagram:hover { color: #E1306C; }
+    .social-link.facebook:hover { color: #1877F2; }
+
+    .legal-links { margin-top: 15px; }
+    .legal-links a { color: rgba(255,255,255,0.7); text-decoration: none; margin-right: 15px; font-size: 0.8rem; }
+    .legal-links a:hover { color: white; text-decoration: underline; }
+
+    .legal-disclaimer { margin-top: 20px; font-size: 0.75rem; color: rgba(255,255,255,0.5); text-align: justify; line-height: 1.4; }
+
+    .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px; background-color: var(--verde-whatsapp); color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 2px 3px #999; z-index: 1000; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: transform 0.3s; }
+    .whatsapp-float:hover { transform: scale(1.1); }
+</style>
+
+<!-- BOTÓN FLOTANTE WHATSAPP -->
+<a href="https://wa.me/5493425663817?text=Hola%20Multifinanzas%20Santa%20Fe,%20quiero%20consultar%20por%20un%20pr%C3%A9stamo%20personal." class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- CABECERA CON SÍMBOLO EN LOGO -->
+<header>
+    <div class="container">
+        <a href="#" class="logo"><i class="fas fa-chart-line"></i> <strong>Multifinanzas</strong> Santa Fe</a>
+        <nav>
+            <a href="#requisitos">Requisitos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO CON ALCANCE PROVINCIAL Y NACIONAL -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-text">
+            <h1>Impulsamos tus proyectos con la financiación que necesitás.</h1>
+            <p>Créditos a tu medida, de forma ágil y con mínimos requisitos.</p>
+            <div class="hero-tags">
+                Asesoramiento para Activos, Jubilados y Pensionados.<br>
+                Provinciales (Santa Fe y Entre Ríos) y Nacionales a nivel país.
+            </div>
+        </div>
+        
+        <div class="form-box">
+            <h3>Solicitá tu Gestión Hoy</h3>
+            <form action="#" method="POST" onsubmit="alert('Borrador enviado'); return false;">
+                
+                <div class="form-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" placeholder="Ej: Juan Pérez" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>DNI</label>
+                        <input type="text" placeholder="Sin puntos" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Teléfono / WhatsApp</label>
+                        <input type="tel" placeholder="Ej: 342 1234567" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="nombre@correo.com" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Situación Laboral</label>
+                        <select required>
+                            <option value="" disabled selected>Seleccioná...</option>
+                            <option>Activo</option>
+                            <option>Jubilado</option>
+                            <option>Pensionado</option>
+                        </select>
+                    </div>
+                    
+                    <!-- SOLAPA DE ORIGEN OPTIMIZADA -->
+                    <div class="form-group">
+                        <label>Jurisdicción / Origen</label>
+                        <select required>
+                            <option value="" disabled selected>Seleccioná...</option>
+                            <option>Provincial Santa Fe</option>
+                            <option>Provincial Entre Ríos</option>
+                            <option>Nacional (ANSES / Jubilados / Pensionados)</option>
+                            <option>Nacional (Empleados Públicos / Ministerios)</option>
+                            <option>Nacional (Otros)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>¿A qué Repartición, Ministerio u Organismo pertenece?</label>
+                    <input type="text" placeholder="Ej: Educación, Salud, Policía, ANSES, etc." required>
+                </div>
+
+                <div class="form-group">
+                    <label>Adjuntar último Recibo de Sueldo</label>
+                    <div class="file-input-wrapper">
+                        <div class="file-label-btn"><i class="fas fa-cloud-upload-alt"></i> Seleccionar Imagen o PDF</div>
+                        <input type="file" accept=".pdf, .jpg, .jpeg, .png" required onchange="if(this.files[0]) this.previousElementSibling.innerHTML = '✔ ' + this.files[0].name;">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar Solicitud</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN REQUISITOS -->
+<section class="features" id="requisitos">
+    <div class="container">
+        <h2>Gestión de Préstamos Personales</h2>
+        <div class="grid-features">
+            <div class="feature-card">
+                <i class="fas fa-hand-holding-usd"></i>
+                <h3>Asesoramiento Personalizado</h3>
+                <p>Buscamos y gestionamos la mejor alternativa del mercado según tu perfil.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Trámite Ágil</h3>
+                <p>Evaluación rápida para que recibas respuesta en menos de 24 horas.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-eye"></i>
+                <h3>Confidencialidad</h3>
+                <p>Tus datos y documentos están protegidos bajo estricta reserva legal.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PIE DE PÁGINA ADAPTADO A PRESTADOR DE SERVICIOS -->
+<footer id="contacto">
+    <div class="container">
+        <div class="footer-content">
+            <div>
+                <h4><i class="fas fa-chart-line"></i> Multifinanzas Santa Fe</h4>
+                <p>Horarios: Lunes a Viernes de 08:00 a 16:00 hs.</p>
+                <p style="margin-top: 5px;">Contacto: multifinazassantafe@gmail.com</p>
+                
+                <div class="legal-links">
+                    <a href="#">Política de Privacidad y Tratamiento de Datos</a>
+                    <a href="#">Términos del Servicio de Gestión</a>
+                </div>
+            </div>
+            <div>
+                <h4>Seguinos en nuestras redes</h4>
+                <div class="social-icons">
+                    <a href="https://wa.me/5493425663817?text=Hola%20Multifinanzas%20Santa%20Fe" class="social-link whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mult.ifinanzassantafe" class="social-link instagram" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/search/top?q=Santa%20Fe%20Multifinanzas" class="social-link facebook" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- TEXTO LEGAL TRANSPARENTE -->
+        <div class="legal-disclaimer">
+            <p><strong>Aviso importante sobre nuestro servicio:</strong> Multifinanzas Santa Fe es una marca dedicada exclusivamente a la prestación de servicios de asesoramiento, gestión e intermediación financiera. No operamos como una entidad financiera directa, cooperativa, mutual, ni realizamos intermediación financiera marginal en los términos de la Ley de Entidades Financieras. El envío del formulario constituye una solicitud para que nuestro equipo analice el perfil del usuario y gestione la mejor alternativa disponible ante las diferentes entidades de crédito aliadas. La aprobación definitiva, los plazos, las tasas de interés (TNA/TEA) y el Costo Financiero Total (CFT) son determinados de forma exclusiva por la entidad otorgante del crédito al momento de la firma. En cumplimiento de la Ley N° 25.326 de Protección de Datos Personales, la documentación recibida (DNI y Recibos de Sueldo) será tratada con absoluta reserva y utilizada únicamente con el fin de tramitar la solicitud de servicio solicitada por el interesado.</p>
+            <p style="margin-top: 15px; opacity: 0.8;">&copy; 2026 Multifinanzas Santa Fe. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
