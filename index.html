@@ -108,35 +108,35 @@
             </div>
         </div>
         
-        <div class="form-box">
+       <div class="form-box">
             <h3>Solicitá tu Gestión Hoy</h3>
-            <form action="#" method="POST" onsubmit="alert('Borrador enviado'); return false;">
+            <form action="https://formsubmit.co/multifinazassantafe@gmail.com" method="POST" enctype="multipart/form-data">
                 
                 <div class="form-group">
                     <label>Nombre Completo</label>
-                    <input type="text" placeholder="Ej: Juan Pérez" required>
+                    <input type="text" name="Nombre" placeholder="Ej: Juan Pérez" required>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
                         <label>DNI</label>
-                        <input type="text" placeholder="Sin puntos" required>
+                        <input type="text" name="DNI" placeholder="Sin puntos" required>
                     </div>
                     <div class="form-group">
                         <label>Teléfono / WhatsApp</label>
-                        <input type="tel" placeholder="Ej: 342 1234567" required>
+                        <input type="tel" name="Telefono" placeholder="Ej: 342 1234567" required>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" placeholder="nombre@correo.com" required>
+                    <input type="email" name="Email" placeholder="nombre@correo.com" required>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
                         <label>Situación Laboral</label>
-                        <select required>
+                        <select name="Situacion Laboral" required>
                             <option value="" disabled selected>Seleccioná...</option>
                             <option>Activo</option>
                             <option>Jubilado</option>
@@ -144,10 +144,9 @@
                         </select>
                     </div>
                     
-                    <!-- SOLAPA DE ORIGEN OPTIMIZADA -->
                     <div class="form-group">
                         <label>Jurisdicción / Origen</label>
-                        <select required>
+                        <select name="Jurisdiccion" required>
                             <option value="" disabled selected>Seleccioná...</option>
                             <option>Provincial Santa Fe</option>
                             <option>Provincial Entre Ríos</option>
@@ -160,21 +159,20 @@
 
                 <div class="form-group">
                     <label>¿A qué Repartición, Ministerio u Organismo pertenece?</label>
-                    <input type="text" placeholder="Ej: Educación, Salud, Policía, ANSES, etc." required>
+                    <input type="text" name="Reparticion" placeholder="Ej: Educación, Salud, Policía, ANSES, etc." required>
                 </div>
 
                 <div class="form-group">
                     <label>Adjuntar último Recibo de Sueldo</label>
                     <div class="file-input-wrapper">
                         <div class="file-label-btn"><i class="fas fa-cloud-upload-alt"></i> Seleccionar Imagen o PDF</div>
-                        <input type="file" accept=".pdf, .jpg, .jpeg, .png" required onchange="if(this.files[0]) this.previousElementSibling.innerHTML = '✔ ' + this.files[0].name;">
+                        <input type="file" name="Recibo de Sueldo" accept=".pdf, .jpg, .jpeg, .png" required onchange="if(this.files[0]) this.previousElementSibling.innerHTML = '✔ ' + this.files[0].name;">
                     </div>
                 </div>
 
                 <button type="submit" class="btn-submit">Enviar Solicitud</button>
             </form>
         </div>
-    </div>
 </section>
 
 <!-- SECCIÓN REQUISITOS -->
